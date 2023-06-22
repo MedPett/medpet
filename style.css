@@ -1,0 +1,557 @@
+
+@font-face {
+  font-family: MondayRomantic;
+  src: url(fonts/MondayRomantic.otf);
+}
+@font-face {
+  font-family: MADEINFINITY;
+  src: url(fonts/MADEINFINITY\ PERSONALUSE-Light.otf);
+}
+
+.inicial {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient( rgba(40, 15, 139, 0.656) 48.65%, #3F59A6 100%);
+}
+
+.saudacao {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-family: MondayRomantic;
+  color: #fff;
+  font-size: 2em;
+}
+
+.recado {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  font-family: MADEINFINITY;
+  color: #fff;
+}
+
+.imagem1 {
+  position: relative;
+  display: flex;
+  top: 9rem;  
+}
+
+.imagem1 img {
+  width: 100%;
+  height: auto;
+  top: 9rem;
+}
+.wrapper{
+  position: fixed;
+  top: 81%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.botao1{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.botao1 span{
+  position: relative;
+  z-index: 2;
+}
+
+.botao1:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #e54e71;
+  transition: all .35s;
+}
+
+.botao1:hover{
+  color: #fff;
+}
+
+.botao1:hover:after{
+  width: 100%;
+}
+@media (max-width: 770px){
+  .inicial {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .saudacao {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    font-size: 1.8em;
+    z-index: 5;
+  }
+  
+  .recado {
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    z-index: 6;
+  }
+  
+  .imagem1 {
+    position: relative;
+    display: flex;
+    top: 0.9rem; 
+    left: -14%; 
+  }
+  
+  .imagem1 img {
+    width: 100%;
+    height: auto;
+    top: 6rem;
+  }
+  .wrapper{
+    position: fixed;
+    top: 81%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .botao1{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  .botao1 span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .botao1:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e54e71;
+    transition: all .35s;
+  }
+  
+  .botao1:hover{
+    color: #fff;
+  }
+  
+  .botao1:hover:after{
+    width: 100%;
+    
+  }
+
+}
+@media (min-width: 616px) and (max-width:975px){
+  .saudacao { 
+    position: flex;
+    top: 50%;
+    left: 9%;
+    font-size: 2.6em;
+    z-index: 5;}
+
+    .imagem1 {
+    position: relative;
+    display: flex;
+    top: 12rem; 
+    left: -1%;} 
+  
+  
+  .imagem1 img {
+    width: 100%;
+    height: auto;
+    top: 6rem;
+  
+}
+
+.botao1{
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.botao1 span{
+  position: relative;
+  z-index: 10;
+}
+
+.recado {
+  position: flex;
+  top: 72%;
+  left: 3%;
+  z-index: 5;
+}
+}
+@media (min-width: 220px) and (max-width:618px){
+  .saudacao {
+    position: flex;
+    top: 47%;
+    left: 2%;
+    font-size: 1.6em;
+    z-index: 5;
+  }
+
+  .recado {
+    position: flex;
+    top: 67%;
+    left: 3%;
+    z-index: 5;
+  }
+
+  .wrapper{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .botao1{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  .botao1 span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .botao1:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e54e71;
+    transition: all .35s;
+  }
+  
+  .botao1:hover{
+    color: #fff;
+  }
+  
+  .botao1:hover:after{
+    width: 100%;
+  }
+  .imagem1 {
+    position: relative;
+    display: flex;
+    top: 10%;
+    left: -25%; 
+  }
+  
+  .imagem1 img {
+    width: 100%;
+    height: auto;
+    left: -25%;
+    
+  }
+}
+
+
+
+
+
+/* Estlizando o menu */
+
+
+
+.Menu {
+  background: #6f73f05b url(https://i.imgur.com/uryZw93.png) repeat;
+  /*  background-attachment: fixed; */
+  color: #111111;
+  font-family: system-ui;
+  font-size: 100%;
+  line-height: 1.4;
+  
+}
+
+
+.titulo {
+  text-align: center;
+  top:18%;
+}
+
+
+
+.titulo-do-menu {
+  font-size: 2.1rem;
+  font-family: 'MADEINFINITY', Arial, sans-serif;
+  color: #14464B;
+  
+}
+
+/* Estlizando o botão */
+
+  .buttons{
+    text-align: center;
+  }
+
+  
+  .buttons ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 30px; /* Valor ajustável para alterar o grau de arredondamento */
+    background-color: #3E3C73;
+    color: #FFFFFF;
+    margin-top: 3.4%;
+    text-decoration: none;
+    transition: background-color 0.3s, font-size 0.3s;
+  }
+  
+
+  .button:last-child{
+    margin-right: 8px;
+    margin-left: 8px;
+    align-items: center;
+  }
+
+  .button:hover {
+    background-color: #2009a7;
+  }
+
+  .imag2{
+    width: 35px;
+    height: 35px;
+  }
+
+
+  @media (min-width: 300px) and (max-width:468px) {
+
+    .titulo {
+      text-align: center;
+      top:15%;
+    }
+
+    .button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+    .button {
+      width: 200px;
+      margin-top: 8%;
+    
+    }
+    }
+    .buttons {
+      position: relative;
+    }
+    
+    @media (min-height: 501px) {
+      .buttons {
+        top: 2%;
+        transform: translateY(5%);
+      }
+
+      .titulo {
+        top: 2%;
+        transform: translateY(5%);
+      }
+    }
+
+
+
+    /*personalizando janelas da cardiologia*/
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      word-break: break-word;
+      
+  }
+
+  .navbar {
+      background-color: #f5f5f5;
+      padding: 0.7rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+  }
+
+  .titulo2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+  }
+
+  .conteudo {
+      margin-top: 80px;
+  }
+
+  .cardiologia{
+    margin-top: 80px;
+
+    }
+
+  h2[sub] {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 5%;
+  }
+
+  h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+  }
+
+  p {
+      font-size: 14px;
+      margin-top: 10px;
+  }
+
+  ul {
+      margin-top: 10px;
+      margin-bottom: 20px;
+  }
+
+  li {
+      font-size: 14px;
+      margin-top: 5px;
+      margin-left: 20px;
+  }
+
+  /* Responsividade */
+  @media screen and (max-width: 600px) {
+      .titulo2 {
+          font-size: 16px;
+          word-break: break-word;
+      }
+
+      h2[sub] {
+          font-size: 18px;
+          margin-top: 15%;
+          word-break: break-word;
+      }
+
+      h2 {
+          font-size: 16px;
+          word-break: break-word;
+      }
+
+      p {
+          font-size: 12px;
+          margin-top: 8px;
+          word-break: break-word;
+      }
+
+      ul {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          word-break: break-word;
+      }
+
+      li {
+          font-size: 12px;
+          margin-left: 15px;
+          word-break: break-word;
+      }
+  }
+
+
+  .imagedoenca img {
+      max-width: 50%;
+      height: auto;
+  }
+  
+  footer {
+    background-color: #f5f5f5;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #6c63ff;
+    text-decoration: none;
+  }
+
+  #referencia {
+    margin-top: 50px; /* Espaçamento para evitar sobreposição do conteúdo */
+  }
+
+  #referencia h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #referencia p {
+    font-size: 14px;
+  }
+
+  #referencia a {
+    color: #6c63ff;
+    text-decoration: none;
+  }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato Profissional Veterinárias Altamira/PA</title>
+    <link rel="shortcut icon" href="favicon/logomedvet.png" type="image/x-icon">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+        body {
+        align-items: center;
+        background-color: #f2f2f2;
+        display: flex;
+        font-family: "Merriweather", serif;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        }
+        .person {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        }
+        .container {
+        border-radius: 50%;
+        height: 312px;
+        -webkit-tap-highlight-color: transparent;
+        transform: scale(0.48);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        width: 400px;
+        }
+        .container:after {
+        background-color: #f2f2f2;
+        content: "";
+        height: 10px;
+        position: absolute;
+        top: 390px;
+        width: 100%;
+        }
+        .container:hover {
+        transform: scale(0.54);
+        }
+        .container-inner {
+        clip-path: path(
+            "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+        );
+        position: relative;
+        transform-origin: 50%;
+        top: -200px;
+        }
+        .circle {
+        background-color: #fee7d3;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 380px;
+        left: 10px;
+        pointer-events: none;
+        position: absolute;
+        top: 210px;
+        width: 380px;
+        }
+        .img {
+        pointer-events: none;
+        position: relative;
+        transform: translateY(20px) scale(1.15);
+        transform-origin: 50% bottom;
+        transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .container:hover .img {
+        transform: translateY(0) scale(1.2);
+        }
+        .img1 {
+        left: 22px;
+        top: 164px;
+        width: 340px;
+        }
+        .img2 {
+        left: -46px;
+        top: 174px;
+        width: 444px;
+        }
+        .img3 {
+        left: -16px;
+        top: 144px;
+        width: 466px;
+        }
+        .divider {
+        background-color: #ca6060;
+        height: 1px;
+        width: 160px;
+        }
+        .name {
+        color: #404245;
+        font-size: 36px;
+        font-weight: 600;
+        margin-top: 16px;
+        text-align: center;
+        }
+        .title {
+        color: #6e6e6e;
+        font-family: arial;
+        font-size: 14px;
+        font-style: italic;
+        margin-top: 4px;
+        }
+
+
+        
+
+
+    .logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+    .logos img {
+            width: 25px; /* Defina a largura desejada para as imagens */
+            height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+            transition: transform 0.3s ease-in-out;
+            margin-right: 10px;
+        }
+
+    .logos img:hover {
+            transform: scale(1.2); /* Aumenta a escala da imagem ao passar o mouse sobre ela */
+        }
+
+    /* botão menu */
+
+    .back-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        z-index: 9999; /* Certifique-se de que o z-index seja alto o suficiente para que o botão fique acima de outros elementos na página */
+    }
+
+    .back-button a {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-family: "Merriweather", serif;
+    }
+
+    .back-button a:hover {
+        color: rgb(31, 140, 65); /* Mudando a cor do texto no hover */
+    }
+
+    .back-button img {
+        width: 30px; /* Defina a largura desejada para a imagem */
+        height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+        margin-right: 5px; /* Adicione margem à direita da imagem */
+    }
+
+    .back-button span {
+        font-weight: bold;
+    }
+
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="back-button">
+        <a href="menu.html">
+            <img src="favicon/logomedvet.png" alt="Voltar">
+            <span>menu</span>
+        </a>
+    </div>
+
+    <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img
+              class="circle"
+              src="imagens/clinica.png"
+            />
+
+            />
+            
+            <img
+              class="img img2"
+              src="imagens/Dra Barbára.png"
+            />
+
+
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="name">Bárbara Amorim</div>
+        <div class="title">Médica Veterinaria
+            <div class="logos">
+                <a href="https://wa.me/559391218426" target="_blank">
+                  <img src="imagens/png whatsapp.png" alt="What">
+                </a>
+                <a href="https://www.instagram.com/barbara_amvet/" target="_blank">
+                  <img src="imagens/png instagram.png" alt="Inst">
+                </a>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img
+              class="circle"
+              src="imagens/clinica.png"
+            />
+            <img
+              class="img img2"
+              src="imagens/Dr Davi.png"
+            />
+          </div>          
+        </div>
+        <div class="divider"></div>
+        <div class="name">Davi Bonatto</div>
+        <div class="title">Médico Veterinario
+            <div class="logos">
+                <a href="https://wa.me/559185901298" target="_blank">
+                <img src="imagens/png whatsapp.png" alt="What">
+                </a>
+                <a href="https://www.instagram.com/drdavibonatto/" target="_blank">
+                <img src="imagens/png instagram.png" alt="Inst">
+                </a>
+            </div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="container">
+          <div class="container-inner">
+            <img
+              class="circle"
+              src="imagens/clinica.png"/>
+            <img
+              class="img img3"
+              src="imagens/Dra Nathalia.png"
+            />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="name">Nathálya Rosário</div>
+        <div class="title">Médica Veterinaria
+            <div class="logos">
+                <a href="https://wa.me/559392443335" target="_blank">
+                <img src="imagens/png whatsapp.png" alt="What">
+                </a>
+                <a href="https://www.instagram.com/nathalyarosario/" target="_blank">
+                <img src="imagens/png instagram.png" alt="Inst">
+                </a>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

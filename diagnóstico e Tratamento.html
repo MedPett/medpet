@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnósticos e Procedimentos Clínicos</title>
+    <link rel="shortcut icon" href="favicon/logomedvet.png" type="image/x-icon">
+    <style>
+    *{
+        box-sizing: border-box;
+        }
+        html, body {
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+        }
+        body {
+        display: block;
+        background: linear-gradient(45deg, #ae27bd, #16065e, #74042d );
+        font-family: 'Ropa Sans', sans-serif;
+        }
+        #message {
+        color: white;
+        padding-bottom: 20px;
+        }
+        .body-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        }
+        /*
+        h1 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        }*/
+        .image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            }
+        .titulo{
+            color: black;
+            font-size: 35%;
+        }
+        .slider-mid-card-carousel {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        }
+        .slider-mid-card-carousel .slider-wrap {
+        width: calc(100% + 40px);
+        position: relative;
+        margin-left: -20px;
+        margin-right: -20px;
+        display: flex;
+        justify-content: flex-start;
+        overflow: hidden;
+        max-width: 1000px;
+        }
+        .slides {
+        display: flex;
+        flex-shrink: 0;
+        transition: all 0.5s;
+        width: 100%;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        transform: translate(0);
+        margin-left: 0;
+        }
+        .slides::-webkit-scrollbar {
+        display: none !important;
+        }
+        .slides .slide {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: calc(100% - 80px);
+        text-align: left;
+        margin-right: 5px;
+        margin-left: 5px;
+        flex-shrink: 0;
+        position: relative;
+        scroll-snap-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: all 1s ease;
+        }
+        .slides .slide.active {
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        }
+        .slides .slide:first-child {
+        margin-left: 50%;
+        }
+        .slides .slide:last-child:after {
+        content: '';
+        position: absolute;
+        right: -50%;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        }
+        .slides .slide .content {
+        position: relative;
+        background: rgba(255, 255, 255, 0.807);
+        background: rgba(255, 255, 255, 0.389);
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-size: 50px;
+        font-weight: bold;
+        transition: all .9s ease;
+        }
+        .slides .slide.active .content{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        transition: all .3s ease 1s;
+        background: #ebebebdb;
+
+        }
+        .slider-mid-card-carousel .btns-wrap {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+        }
+        .slider-mid-card-carousel .btns-wrap .btn-prev,
+        .slider-mid-card-carousel .btns-wrap .btn-next {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: white;
+        border-radius: 50%;
+        border: 0;
+        box-shadow: 0 0 15px rgba(17,17,17,.15);
+        cursor: pointer;
+        pointer-events: auto;
+        }
+        .slider-mid-card-carousel .btn-prev{
+        left: -10px;
+        }
+        .slider-mid-card-carousel .btn-next{
+        right: -10px;
+        }
+        .slider-mid-card-carousel .btn-prev:after,
+        .slider-mid-card-carousel .btn-next:after{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid red;
+        border-right: 1px solid red;
+        }
+        .slider-mid-card-carousel .btn-prev:after{
+        left: 50%;
+        top: 50%;
+        transform-origin: top right;
+        transform: rotate(-135deg) translate(100%, -100%);
+        }
+        .slider-mid-card-carousel .btn-next:after{
+        left: 50%;
+        top: 50%;
+        transform-origin: top right;
+        transform: rotate(45deg) translate(-25%, 50%);
+        }
+        .btn-prev.invisible,
+        .btn-next.invisible {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Personalizando botão */
+        .button {
+            font-size: 36%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 20px;
+            width: 160px;
+            border-radius: 30px; /* Valor ajustável para alterar o grau de arredondamento */
+            background-color: #3E3C73;
+            color: #FFFFFF;
+            margin-top: 2.3%;
+            text-decoration: none;
+            transition: background-color 0.3s, font-size 0.3s;
+        }
+        
+
+        .button:last-child{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+        }
+
+        .button:hover {
+            background-color: #2009a7;
+        }
+
+        /*Media Query*/
+        @media (min-width: 768px) {
+        .slides .slide {
+            width: calc(33.33% - 30px);
+        }
+        .btns-wrap {
+            max-width: calc(50% + 30px);
+        }
+        }
+        @media (min-width: 768px) {
+        .btns-wrap {
+            max-width: calc(1000px + 30px);
+        }
+
+        }
+</style>
+</head>
+<body>
+    <section class="body-wrap">
+  <div id="message">Escolha um assunto</div>
+  <div id="carrusel" class="slider-mid-card-carousel">
+    <div class="slider-wrap">
+      <div id="carrusel-slides" class="slides">
+        <div class="slide">
+          <div class="content">
+            <img class="image" src="imagens/1.png" alt="1">
+            <h1 class="titulo">informações clinicas para Doença da Valva Mitral</h1>
+            <a class="button" href="informações clinicas para Doença da Valva Mitral.html">Conhecer</a>
+          </div>    
+        </div>
+        <div class="slide">
+          <div class="content">
+            <img class="image" src="imagens/2.png" alt="2">
+            <h1 class="titulo">informações clinicas para Cardiomiopatia Dilatada</h1>
+            <a class="button" href="informações clinicas para Cardiomiopatia Dilatada.html">Conhecer</a>
+          </div>    
+        </div>
+        <div class="slide">
+          <div class="content">
+            <img class="image" src="imagens/3.png" alt="3">
+            <h1 class="titulo">informações clinicas para Insuficiência Cardíaca Congestiva</h1>
+            <a class="button" href="informações clinicas para Insuficiência Cardíaca.html">Conhecer</a>
+          </div>    
+        </div>
+        <div class="slide">
+          <div class="content">
+            <img class="image" src="imagens/4.png" alt="4">
+            <h1 class="titulo">informações clinicas para Fibrilação Atrial</h1>
+            <a class="button" href="informações clinicas para Fibrilação Atrial.html">Conhecer</a>
+          </div>      
+        </div>
+      </div>
+    </div>
+    <div class="btns-wrap">
+      <button class="btn-prev invisible"></button>
+      <button class="btn-next"></button>
+    </div>
+  </div>
+</section>
+<script>/*--------------------------------------------------------------
+## When DOM is fully loaded
+--------------------------------------------------------------*/
+    document.addEventListener("DOMContentLoaded", function(event) {
+    //Media queries
+    const mediaQueriesBig = window.matchMedia('(min-width: 7680px)');
+
+    const slider = document.querySelector('.slider-mid-card-carousel');
+    const sliderWrap = slider.querySelector('.slider-wrap');
+    const sliderScroller = slider.querySelector('.slides');
+        
+    const slides = Array.from(slider.querySelectorAll(".slides .slide"));
+    const btnNext = slider.querySelector('.btn-next');
+    const btnPrev = slider.querySelector('.btn-prev');
+    
+    slides[0].classList.add('active');
+    btnPrev.classList.add('invisible');
+    
+    function scrollToNextPage() {
+        const slider_item_size = sliderScroller.querySelector('.slide').clientWidth;
+        sliderScroller.scrollBy({left: slider_item_size, top: 0, behaviour: 'smooth'});
+    }
+    function scrollToPrevPage() {
+        const slider_item_size = sliderScroller.querySelector('.slide').clientWidth;
+        sliderScroller.scrollBy(-slider_item_size, 0);        
+    }
+    
+    btnNext.addEventListener("click", scrollToNextPage);
+    btnPrev.addEventListener('click', scrollToPrevPage);
+    
+    // Creation variable of Slider position 
+    var positionSlider;
+    
+    // On load get slider position
+    positionSlider = sliderWrap.getBoundingClientRect();
+    console.log(positionSlider);
+        console.log(positionSlider.width/3);
+    
+    // When we resize viewport update slider position
+    function reportWindowSize() {
+        positionSlider = sliderWrap.getBoundingClientRect();
+    }
+    window.addEventListener('resize', reportWindowSize)
+    
+    // Cuando se hace scroll
+    sliderScroller.addEventListener('scroll', function() {
+    
+        for( let i = 0; i < slides.length; i++) {
+        slideInd = slides[i];
+    
+        positionSlide = slideInd.getBoundingClientRect();
+        positionSlide = slideInd.getBoundingClientRect();
+            positionSlide2 = slides[1].getBoundingClientRect();
+            console.log('slide2.left: '+positionSlide2.left);
+            console.log('slider.left: '+(positionSlider.left));
+            console.log('slider.width: '+(positionSlider.width));
+            console.log('slider.width/3: '+(positionSlider.width/3));
+            //console.log('slider.left: '+positionSlider.left);
+            //console.log('slider.left/3*1: '+(positionSlider.right/3)*1);
+            console.log('slide2.right: '+positionSlide2.right);
+            console.log('slider.right: '+positionSlider.right);
+            console.log('slider.width/3*2: '+(positionSlider.width/3)*2);
+            console.log('/n');
+        
+        if (mediaQueriesBig.matches) { 
+            // If is bigger than slider-wrap max-width than
+            
+            //if( (positionSlide.left - positionSlider.left) >= 0 && (positionSlide.right  - positionSlider.right ) <= 0) {
+            if( (positionSlide.left >= (positionSlider.width/3) ) && (positionSlide.right <= (positionSlider.width/3)*2 ) ) {
+            slideInd.classList.add('active');
+            } else {
+            slideInd.classList.remove('active');
+            }
+
+        } else { 
+            // If is smaller than slider-wrap max-width than
+
+            if (positionSlide.left >= 0 && positionSlide.right <= window.innerWidth) {
+            slideInd.classList.add('active');
+            } else {
+            slideInd.classList.remove('active');
+            }
+            
+        }
+        
+        }
+    
+        if (sliderScroller.lastElementChild.classList.contains('active')) {
+        btnNext.classList.add('invisible');
+        } else { 
+        btnNext.classList.remove('invisible');
+        }
+    
+        if (sliderScroller.firstElementChild.classList.contains('active')) {
+        btnPrev.classList.add('invisible');
+        } else {
+        btnPrev.classList.remove('invisible');
+        }
+    
+    });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas Para Tutores</title>
+    <link rel="shortcut icon" href="favicon/logomedvet.png" type="image/x-icon">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+
+        body {
+        background: #6f73f05b url(https://i.imgur.com/HTxDIcU.png) repeat;
+        /*  background-attachment: fixed; */
+        color: #111111;
+        font-family: system-ui;
+        font-size: 100%;
+        line-height: 1.4;
+        }
+
+        #container {
+        background-color: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 30px 30px 40px 0px #c3c3c3;
+        max-width: 40rem;
+        margin: 5rem auto;
+        padding: 2rem 3rem;
+        }
+
+        #container > h2 {
+        display: block;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin: 1.5rem auto 0;
+        text-align: center;
+        }
+
+        #container > p {
+        font-size: 0.8rem;
+        margin: 1rem 0 2.5rem 0;
+        text-align: center;
+        }
+
+        /*style component*/
+        .nav-tab {}
+
+        .nav-tab ul {
+        list-style: none;
+        font-size: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        align-items: center;
+        grid-gap: 0;
+        }
+
+        .nav-tab ul li {
+        text-align: center;
+        }
+
+        .nav-tab ul li button {
+        background-color: transparent;
+        border-radius: 0;
+        border: 0;
+        border-bottom: 1px solid #ececec;
+        color: #797979;
+        height: 5rem;
+        outline: 0;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.12s;
+        width: 100%;
+        }
+
+        .nav-tab ul li button.tab-current,
+        .nav-tab ul li button:hover {
+        border-bottom: 1px solid #1976d2;
+        color: #1976d2;
+        padding-bottom: 1.5rem;
+        position: relative;
+        }
+
+        .content-tab {
+        display: none;
+        padding: 3rem 0;
+        animation: fadeIn 0.15s linear;
+        }
+
+        .current-content-tab {
+        display: block;
+        }
+
+        /* optional */
+        .content-tab p,
+        .content-tab strong {
+        display: block;
+        margin: 2rem 0;
+        }
+
+        .content-tab ul li,
+        .content-tab ol li{
+        list-style-position: inside;
+        margin: 1rem 2rem;
+        }
+
+        @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+        }
+
+        @media only screen and (max-width: 600px) {
+        .nav-tab ul {
+            grid-template-columns: 1fr;
+        }
+        }
+
+        /* Botão de volta ao topo */
+        #btn-top {
+            position: fixed;
+            top: 37%;
+            right: 3%;
+            width: 40px;
+            height: 40px;
+            background-color: #ba1818;
+            color: #fff;
+            border-radius: 50%;
+            border: none;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Botão de volta ao início da seção */
+        #btn-start {
+            position: fixed;
+            bottom: 39%;
+            right: 3%;
+            width: 40px;
+            height: 40px;
+            background-color: #ba1818;
+            color: #fff;
+            border-radius: 50%;
+            border: none;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .nav-tab {
+        position: relative;
+        top: 0;
+        background-color: #f1f1f1;
+        padding: 10px;
+        }
+
+        .content-tab {
+        margin-top: 20px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div id="container">
+        <h2>Orientações para tutores</h2>
+        <nav class="nav-tab">
+          <ul>
+            <li><button data-tab="tab-1"> Vou viajar de ônibus. O que preciso para levar meu pet?</button></li>
+            <li><button data-tab="tab-2">Será que o meu pet é cardiopata?</button></li>
+            <li><button data-tab="tab-3">Ações que podem garantir a qualidade de vida de cães e gato</button></li>
+            <li><button data-tab="tab-4">Como ser um bom tutor de pet?</button></li>
+            <li><button data-tab="tab-5">banhos são necessários?</button></li>
+            <li><button data-tab="tab-6">FÉRIAS E AGORA? COMO FICARÁ MEU PET?</button></li>
+            <li><button data-tab="tab-7">Quantos dias posso vacinar o filhote?</button></li>
+            <li><button data-tab="tab-8">Alimentos humanos que são perigosos para pet.</button></li>
+            <li><button data-tab="tab-9">Meu pet não quer mais comer ração, o que fazer?</button></li>
+          </ul>
+        </nav>
+      <!-- FIRST SECTION -->
+        <section class="content-tab" id="tab-1">
+            <p>As viagens necessitam de uma programação prévia, a fim de evitar possíveis transtornos. Quando se trata de viajar com um pet, esses planejamentos devem ser ainda maiores e redobrados. O tutor deve entrar em contato com a companhia rodoviária e verificar quais são os pré-requisitos para viajar com o pet; agendar uma consulta veterinária para que o médico veterinário avalie a saúde desse animal, solicite os exames necessários e atualize as vacinas. É importante ter todas essas informações com antecedência, pois, a depender do tempo de viagem, serão necessárias algumas estratégias para preparar esse pet para essa grande aventura. Se o seu pet for agitado ou ansioso, a homeopatia poderá ajudar. O médico veterinário poderá avaliar essa necessidade e realizar a prescrição.</p>
+
+            <p>É importante salientar que cada cidade e/ou município tem suas regras e leis, por isso, a importância de buscar informações antes da data prevista da viagem. Existem algumas regras que são padrões na maioria das cidades, como:</p>
+            
+            <ul>
+                <li>O peso do pet não deve passar de 10 quilos;</li>
+                <li>Deve ter vermifugação e carteira de vacinação (quando houver) atualizadas;</li>
+                <li>Atestado de saúde emitido por um médico veterinário;</li>
+                <li>O animal não deve comprometer a segurança aos demais passageiros.</li>
+            </ul>
+            
+            <p>Lembrando que para animais exóticos e/ou silvestres é necessário uma autorização do Ibama para a viagem.</p>            
+        
+        </section>
+        <section class="content-tab" id="tab-2">
+            <p>As alterações cardíacas em pets costumam ser assustadoras para os seus tutores e provocam muitas indagações sobre como tudo isso pode acontecer. Em geral, os pets que possuem doenças cardíacas podem ter uma boa qualidade de vida desde que o tempo seja o seu aliado. Quanto antes o tutor descobrir que o seu cãozinho ou seu gatinho é cardiopata, maiores serão as chances deles em manter a doença controlada, permitindo uma vida tranquila.</p>
+
+            <p>O primeiro passo é a prevenção. Os pets devem passar por consulta de rotina anualmente e é exatamente nesta consulta que o médico veterinário clínico solicitará exames de laboratório, exames de imagens e, de acordo com a anamnese e com os achados na ausculta cardíaca, solicitará exames cardiológicos e consulta com cardiologista veterinário.</p>
+
+            <p>Existem várias causas que predispõem ao desenvolvimento das cardiopatias, dentre elas podemos destacar:</p>
+            <ul>
+            <li>Sedentarismo</li>
+            <li>Obesidade</li>
+            <li>Idade</li>
+            <li>Alimentação</li>
+            <li>Predisposição genética</li>
+            </ul>
+
+            <p>Os principais sinais observados em animais cardiopatas são: fadiga (cansaço), indisposição, tosse seca, língua e mucosas congestas (arroxeadas), desmaios, falta de ar, apatia, taquipneia (respiração acelerada).</p>
+
+            <p>A avaliação cardiológica será de fundamental importância para detectar de forma precoce doenças como a cardiomiopatia hipertrófica, muito comum nos felinos, e a cardiomiopatia dilatada, mais comum nos cães, além de degenerações valvares crônicas e malformações congênitas. Embora as cardiopatias sejam mais comuns em animais idosos, deve-se ressaltar que todo animal, independentemente da idade, deverá passar por essa avaliação, principalmente raças que possuem maiores predisposições para essas alterações.</p>
+
+            <p>Os animais que apresentarem o diagnóstico de doença cardíaca poderão, de imediato, iniciar o tratamento com medicação ou até mesmo apenas manter o acompanhamento das alterações encontradas, pois cada caso é individual e as condutas também. Todo o tratamento, seja ele medicamentoso ou conservador, será realizado de forma individualizada e irá variar de acordo com a doença. Manter uma rotina saudável e tranquila para o seu pet contribuirá de forma positiva para uma melhor qualidade de vida.</p>
+
+        </section>
+
+          <section class="content-tab" id="tab-3">
+            <p>Dentre elas estão:</p>
+            <ul>
+            <li>Exercícios físicos adequados: Cães e gatos precisam de exercícios regulares para manter uma boa saúde física e mental. Caminhadas, brincadeiras e atividades interativas são algumas formas de garantir o exercício dos pets.</li>
+            <li>Estímulo mental: Cães e gatos são animais inteligentes e precisam de estímulos mentais para evitar o tédio e a ansiedade. Brinquedos interativos e atividades que estimulem o raciocínio e a aprendizagem são excelentes opções.</li>
+            <li>Companhia do tutor: Cães e gatos são animais sociais e precisam de companhia e atenção do tutor. Passar tempo com os pets e incluí-los nas atividades diárias da família é importante para mantê-los felizes e saudáveis.</li>
+            <li>Saúde oral: A saúde oral é fundamental para o bem-estar dos cães e gatos. Escovação regular dos dentes, alimentação adequada e visitas regulares ao veterinário para avaliação da saúde bucal são essenciais.</li>
+            <li>Alimentação saudável: A alimentação saudável é fundamental para a saúde dos cães e gatos. A escolha de uma dieta adequada, com alimentos de qualidade e balanceados, pode prevenir doenças e garantir uma vida saudável.</li>
+            <li>Controle de peso: O controle de peso é fundamental para a saúde dos cães e gatos. A obesidade pode levar a uma série de problemas de saúde, como diabetes, doenças cardíacas e articulares.</li>
+            <li>Prevenção de doenças: A prevenção de doenças é fundamental para manter a saúde dos cães e gatos. Vacinação regular, vermifugação e visitas regulares ao veterinário para exames de rotina são essenciais para prevenir doenças e garantir uma vida saudável para os pets.</li>
+            </ul>
+            <p>Assegure-se que seu pet tem qualidade de vida e, qualquer dúvida, procure o médico veterinário de sua confiança.</p>
+
+        </section>
+
+          <section class="content-tab" id="tab-4">
+            <p> Ser tutor de pet é algo que exige muita responsabilidade. Afinal, estamos recebendo em nosso lar um ser vivo de uma espécie diferente e que possui também necessidades básicas e específicas condizentes com a sua espécie. 
+               </p> 
+               <ol>
+                    <li>Amor: em primeiro lugar é importante que você, tutor, e toda sua família esteja disponível e disposto a dar muito amor e carinho a esse novo “serzinho” que está chegando.</li>
+                    <li>Alimentação: Assim como nós seres humanos somos o que comemos, com os pets isso não é diferente. Por isso é importante oferecer uma alimentação de qualidade, seja ela a ração ou alimentação bioapropriada prescrita por um médico veterinário nutrólogo</li>
+                    <li>Controle de Endo e ectoparasitas: ao receber o seu pet é importante checar se ele já foi vermifugado tendo em vista que a grande maioria, quando são acolhidos, já vem infestados de vermes intestinais e também de pulgas e carrapatos. Fazer uma inspeção geral inicial em todo o animal é muito importante.
+                    <li>Passeios: principalmente os cães precisam de passeios diariamente, o tempo e a quantidade de vezes que esse animalzinho irá passear vai depender muito do seu comportamento e da sua necessidade diária, além dos passeios, enriquecer o ambiente em que esse animal vive com brinquedos, comedouros, bebedouros, banheirinhos, deixará este Pet muito mais entretido e feliz. 
+                    <li>Ambiente e higiene: manter o local do seu Pet sempre limpo e higienizado irá, sem dúvidas, deixá-lo mais confortável e deixará você e sua família também livre de riscos. É bom lembrar que para cada espécie a demanda de um manejo é diferente, a depender do Pet será necessário que o seu ambiente seja higienizado apenas uma vez ao dia já para outros essa limpeza poderá ser necessária mais de uma vez ao dia, e isso inclui caixas de areia para felinos, gaiolas para aves e recintos para répteis por exemplo. 
+                    <li>Consultas de rotina: ao comprar ou adotar um pet, a primeira coisa que você, tutor, deverá fazer é levá-lo imediatamente a um médico veterinário para que o seu Pet passe por uma avaliação bem criteriosa e exames a fim de atestar a saúde dele. É nesta consulta que você poderá tirar todas as suas dúvidas com relação a todos esses itens que nós já citamos aqui como alimentação, vermifugação, vacina, higiene, comportamento, passeios, enriquecimento ambiental. Então a primeira consulta é fundamental para que você tenha um pet sempre feliz e saudável!</li>
+                </ol>
+          </section>
+          <section class="content-tab" id="tab-5">
+            <p>Os pets, diferentemente de nós, não precisam tomar banho com muita frequência. Hoje em dia, com os animais dentro de casa, em cima das camas e sofás, os banhos se tornaram uma rotina para cães e gatos. Eles são banhados praticamente uma vez na semana (Às vezes, até mais). Contudo, em alguns casos, o banho excessivo pode ser até um problema, já que retira a proteção natural da pele e sua oleosidade.</p>
+            <p>Primeiro, é importante ter em mente que, nos animais de pelo curto, o ideal é dar banho de 15 em 15 dias. Para os de pelo longo, essa frequência pode ser um pouco maior, ou seja, no máximo, uma vez por semana, mas sempre observando a pele e pelo do animal, pois como dissemos, banhos excessivos podem retirar a proteção natural e levar a infecções e outros problemas de pele.</p>
+            <p>Mas meu cachorro tomou banho ontem e hoje rolou na graxa ou no esterco. Não vou poder dar outro banho nele? Terei que esperar uma semana? Em casos esporádicos e de necessidade, com certeza, seu pet poderá receber outro banho mesmo um dia depois. Isso apenas não pode se tornar frequente.</p>
+            <p>Os filhotes podem tomar banho, mas isso não deve nunca ser excessivo e somente quando eles tiverem, pelo menos, dois meses de idade. Esses banhos, a princípio, devem ser feitos em casa, pois os filhotes ainda não estão totalmente protegidos de doenças, já que ainda não completaram a vacinação. Assim que terminarem as vacinas, já poderão ir a pet shops especializados.</p>
+            <p>Os banhos devem ser com água morna e shampoos. A propósito: nunca utilize shampoos feitos para humanos, porque o pH não é balanceado para os animais e os detergentes são muito mais fortes, podendo trazer malefícios às peles sensíveis. Compre uma das inúmeras opções feitas exclusivamente para os cães e escolha a melhor para o tipo de pelo ou condição da pele.</p>
+
+        </section>
+
+        <section class="content-tab" id="tab-6">
+            <p>A proximidade do período de férias envolve uma programação diferenciada para as famílias multiespécies. Para que a preocupação com o bem-estar do seu pet não seja um empecilho para o seu descanso, você terá duas opções: Viajar com seu pet ou Deixar seu pet em casa.</p>
+
+            <p>Se pretende viajar com seu pet, siga as seguintes recomendações:</p>
+            
+            <ul>
+              <li>Defina se a viagem é de automóvel, avião ou travessias marítimas.</li>
+              <li>Faça o check-up do seu pet com o médico veterinário de sua confiança, atualizando vacinas e outras medidas de prevenção.</li>
+            </ul>
+            
+            <p><strong>Viagem de automóvel:</strong></p>
+            
+            <ul>
+              <li>Lembre-se que seu pet tem que estar seguro. Da mesma forma que você usa cinto de segurança, os animais também devem ter essa proteção dentro ou fora da caixa de transporte.</li>
+              <li>Se a viagem for prolongada, faça paradas em local seguro a cada duas horas e caminhe um pouco com seu pet. Ofereça água e/ou comida.</li>
+              <li>Nas paradas, não deixe seu pet no veículo enquanto vai ao banheiro ou fazer alguma refeição, pois a temperatura interna no veículo pode subir rapidamente e ele pode sofrer hipertermia, o que pode levar à morte.</li>
+              <li>Mantenha seu pet sempre identificado, caso ocorram separações temporárias nas paradas.</li>
+            </ul>
+            
+            <p><strong>Travessias marítimas:</strong></p>
+            
+            <p>Siga as recomendações da viagem de automóvel. Apesar de não existir paradas, é necessário verificar a necessidade de retirar seu pet da caixa de transporte caso a viagem seja demorada.</p>
+            
+            <p><strong>Viagem de ônibus/avião:</strong></p>
+            
+            <p>Entre em contato com as empresas de viação e aéreas para saber sobre as regras de viagem. Definido o meio de transporte, tenha em mãos o atestado de saúde e vacinação do seu pet, além de endereços de clínicas veterinárias para situações emergenciais.</p>
+            
+            <p>Se considerar que viajar com seu pet não é a melhor escolha para ele, faça a opção de deixá-lo em casa. Nesse caso, siga as seguintes recomendações:</p>
+            
+            <ul>
+              <li>Solicite para um familiar ou amigo que fique hospedado em sua casa e que tenha afinidade com seu pet. Caso não tenha familiares ou amigos dispostos a ficar, você pode contratar um pet sitter. Essa pessoa irá diariamente até sua residência e atenderá as necessidades de higiene, nutricional, social e comportamental de seu animal. Procure referências e deixe o telefone de emergência do serviço veterinário que habitualmente atende seu pet.</li>
+              <li>Se o pet sitter não for uma escolha, você pode optar por um lar temporário. Para isso, seu pet deve conhecer esse lar um pouco antes da viagem, assim ele criará um vínculo e o risco de estresse por mudança de ambiente reduzirá.</li>
+              <li>Se seu animal for castrado, você poderá optar por hotéis especializados na hospedagem de pets. O importante é que você assegure o bem-estar de seu companheiro(a), de acordo com o temperamento dele(a).</li>
+            </ul>
+            
+            <p>Em qualquer situação, mantenha seu pet sempre identificado com telefones de contato e tenha sempre referências de clínicas ou hospitais veterinários em caso de emergência.</p>
+            
+        </section>
+
+        <section class="content-tab" id="tab-7">
+            <p>muitos tutores não sabem muito bem quando vacinar filhote de cachorro, mas a partir dos 45 dias de vida, após a vermifugação, os filhotes de cães devem receber a primeira vacina canina. Normalmente são feitas a Óctupla (V8) ou Déctupla Canina (V10). No período de 21 a 30 dias após a dose da primeira vacina, cachorro precisa reforçar com uma segunda dose da mesma. Depois disso, ainda tem uma terceira dose de reforço, que deve acontecer entre  21 a 30 dias após a segunda dose. Com 4 meses é feita a primeira vacina do cachorro contra Raiva.</p>
+            </section>
+
+        <section class="content-tab" id="tab-8">
+            <p>O abacate tem uma substância chamada Persin. Para os humanos, tudo bem, mas é altamente tóxico para os animais, inclusive para os cães. Seu cachorro pode vomitar e ter diarreia apenas com uma pequena quantidade.</p>
+            <p>A cebola e o alho contêm uma substância chamada dissulfeto de n-propil, que altera a hemoglobina, provocando a destruição de glóbulos vermelhos e causando anemia, icterícia e sangue na urina. Se não for tratado, pode ser fatal.</p>
+            <p>Grapes e passas: Existem alguns casos reportados de cães que sofreram reações tóxicas ou morreram depois de ingerirem uma grande quantidade de uva ou uva-passa. A substância que causa essa intoxicação não foi identificada, mas causa um problema renal no cão.</p>
+            <p>O leite ou seus derivados (queijos, sorvete, etc) pode fazer muito mal para o cachorro, provocando vômitos, diarreia e alergias de pele. Algumas pessoas dão iogurte natural sem açúcar pro cachorro, mas converse com seu veterinário antes.</p>
+            <p>Doces, balas, pães, pasta de dentes e alguns produtos diet são adoçados com xilitol. Essa substância pode causar um aumento na insulina que circula no corpo do cachorro. Isso pode diminuir o açúcar do sangue e levar à insuficiência hepática (problemas renais).</p>
+            <p>O chocolate contém uma substância altamente tóxica para os cães, a Teobromina. Quanto mais escuro um chocolate é, mais Teobromina contém. Os sintomas de envenenamento aparecem quando o cão comeu acima de 45mg por peso; os cães podem falecer caso ingiram mais de 52mg por quilo.</p>
+
+        </section>
+
+        <section class="content-tab" id="tab-9">
+            <p>Como dito, existem diversas situações que podem fazer com que o animal recuse o alimento. Por isso, quando o pet não quer comer ração, é preciso, antes de tudo, analisar o que está acontecendo para então adotar as medidas mais adequadas. Veja a seguir os principais motivos que levam a esse comportamento.</p>
+            <p><strong>Estresse e ansiedade:</strong> Quando o pet fica ansioso ou estressado ele pode perder o apetite. Assim como nos humanos, os problemas psicológicos causam esse efeito nos animais. O estresse pode ser decorrente, por exemplo, da falta de espaço para brincar ou se exercitar, e a ansiedade muitas vezes é decorrente da separação do tutor. Para contornar esses problemas, procure dar mais atenção para o animal, faça passeios com ele e ofereça brinquedos interativos, para que consiga se distrair, relaxar e voltar a ter apetite.</p>
+            <p><strong>Falta de atratividade:</strong> Nem todo pet gosta de todo tipo de alimento. Tanto cachorros quanto gatos podem ter um paladar mais seletivo e, dependendo da ração escolhida, existe a possibilidade de ela não ser muito atrativa para eles. Uma das soluções é procurar novas alternativas oferecendo pequenas porções de outras rações para ver se há uma boa aceitação. Você pode procurar por amostras grátis para verificar qual alimento é mais bem aceito pelo pet.</p>
+            <p><strong>Enjoo do sabor:</strong> Imagine se você tivesse que comer todos os dias, pela vida inteira, a mesma comida. Chegaria o momento em que o sabor enjoaria, e isso também pode acontecer com alguns animais. Muitas vezes, o pet não quer comer ração porque ele já se cansou do sabor dela. Vale comprar uma pequena porção da mesma marca, porém, com sabor diferente, ou então de outra marca com qualidade similar para que o pet possa experimentar algo novo e voltar a se alimentar como antes.</p>
+            <p><strong>Mudanças na rotina:</strong> Os pets se acostumam com a rotina da casa, então, quando acontece alguma mudança, eles podem ficar estressados ou ansiosos. É o caso de o tutor mudar seus horários, chegar um novo membro na família ou um novo animal. Nesse caso, é importante ter paciência para que o pet se readapte. Procure dar mais atenção para ele, brinque, faça carinho, converse e insista na alimentação. Esteja por perto nesse momento e ajude o animal a comer oferecendo os grãos de forma gradativa.</p>
+            <p><strong>Armazenamento inadequado:</strong> Outro fator que precisamos verificar quando o pet não quer comer ração é o modo como ela foi armazenada. Quando isso não é feito do jeito certo, o alimento tende a sofrer alterações de sabor e cheiro, que faz com que fique menos atrativo. Esse é um problema que pode ser facilmente resolvido. Basta manter a embalagem muito bem vedada ou comprar pacotes menores para sempre ter ração fresca.</p>
+            </section>
+
+
+
+
+
+
+
+
+        <!--Botões de Nav-->
+        <button id="btn-top" onclick="scrollToTop()">&uarr;</button>
+        <button id="btn-start" onclick="scrollToStart()">&darr;</button>
+     
+      </div>
+
+      <script>
+        // Select show tab on load page
+        let indexOpen = 0;
+
+        let btnTab = document.querySelectorAll('.nav-tab ul li button');
+        let contentTab = document.querySelectorAll('.content-tab');
+
+        function tabCurrent(thisTab) {
+            let idCurrent = thisTab.dataset.tab;
+            
+            for (let i = 0; i < btnTab.length; i++) {
+                btnTab[i].classList.remove('tab-current');
+            }
+            thisTab.classList.add('tab-current');
+        
+            for (let i = 0; i < contentTab.length; i++) {
+            if (idCurrent === contentTab[i].id) {
+                contentTab[i].classList.add('current-content-tab');
+            } else {
+                contentTab[i].classList.remove('current-content-tab');
+            }
+            }
+        }
+
+        for (let i = 0, len = btnTab.length; i < len; i++) {
+        btnTab[i].onclick = function() {
+        tabCurrent(this);
+        }
+        }        
+        tabCurrent(btnTab[indexOpen]);
+        
+        
+
+        // Função para rolar até o topo do menu
+        function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        }
+
+        // Função para rolar para o início da seção
+        function scrollToStart() {
+        var currentTab = document.querySelector('.current-content-tab');
+        var contentTabTop = currentTab.offsetTop;
+
+        window.scrollTo({
+            top: contentTabTop,
+            behavior: "smooth"
+        });
+        }
+
+      </script>
+</body>
+</html>
+
